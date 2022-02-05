@@ -1,0 +1,13 @@
+
+
+<form class="edit-container" method="post" action="/edit/{{task._id}}/save">
+<h1 class="edit-heading">EDIT TASK</h1>
+    <label for="edit-taskname">Enter Task Name</label>
+    <input type="text" id="edit-taskname" autocomplete="off" name="editTaskName" value="{{task.taskName}}"required>
+    
+    <div class="edit-btn-container">
+        <a href="/"><i class="fas fa-times"></i></a>
+        <button type="submit"><i class="fas fa-check"></i></button>
+
+    </div>
+</form>

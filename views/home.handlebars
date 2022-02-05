@@ -1,0 +1,25 @@
+<div class="task">
+        <h1 class="home-heading">TO-DO LIST</h1>
+
+    {{#if tasks}}
+        <div class="task-container">
+        {{#each tasks}}
+        <form class="task-form">
+            <input class="task-check" type="checkbox">
+            <div class="task-name-container">
+            <p class="task-name">{{this.taskName}}</p>
+            </div>
+            <div class="task-btn-container">
+                <button type="submit" formaction="/edit/{{this._id}}"><i class="far fa-edit"></i></button>
+                <button type="submit" formaction="/delete/{{this._id}}"><i class="fas fa-trash-alt"></i></button>
+                
+            </div>
+        </form>
+        {{/each}}
+    </div>
+    {{/if}}
+    <form class="add-container" action="/" method="post">
+    <input type="text" name="taskName" placeholder="Task Name" autocomplete="off" required>   
+    <button class=""add-btn" type="submit"><i class="fas fa-plus"></i></button>
+    </form>
+</div>
